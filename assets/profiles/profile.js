@@ -17,7 +17,7 @@ function updateUi() {
             <p class="dob"><span class="label">Date of Birth: </span>${data.date}</p>
           </div>
         </div>
-        <a href="#" class="del-btn">Delete</a>
+        <a href="" class="del-btn">Delete</a>
         <div>
       `;
 
