@@ -4,8 +4,9 @@ let btnDelete;
 let datas = JSON.parse(localStorage.getItem("users"));
 
 function updateUi() {
+  gridProfiles.innerHTML = "";
 	datas.forEach((data, index) => {
-		gridProfiles.innerHTML = "";
+    console.log(data);
 		const template = `
       <div class="user">
         <div class="user-info">
@@ -17,7 +18,7 @@ function updateUi() {
             <p class="dob"><span class="label">Date of Birth: </span>${data.date}</p>
           </div>
         </div>
-        <a href="" class="del-btn">Delete</a>
+        <button href="#" class="del-btn">Delete</button>
         <div>
       `;
 
@@ -30,6 +31,7 @@ function updateUi() {
   }
 
   btnDelete = document.querySelectorAll(".del-btn");
+  btnUpdate()
 }
 
 function deleteUser(index){
@@ -42,11 +44,12 @@ function deleteUser(index){
   updateUi();
 }
 
+function btnUpdate(){
+  btnDelete.forEach((btn,index)=>{
+    btn.addEventListener('click', ()=>{deleteUser(index)});
+    console.log(btn);
+  })
+}
+
+
 updateUi();
-
-btnDelete.forEach((btn,index)=>{
-  btn.addEventListener('click', ()=>{deleteUser(index)});
-  console.log(btn);
-})
-
-console.log(btnDelete);

@@ -48,6 +48,7 @@ body {
   padding: 10px 0;
   font-size: small;
   transition-duration: 0.2s;
+  border: none;
 }
 
 .del-btn:hover {

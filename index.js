@@ -30,10 +30,22 @@ const submit = ()=>{
 	if (!submitBtn.classList.contains('disabled')){
 		const userDb = JSON.parse(localStorage.getItem('users'));
     const genNumber = Math.floor(Math.random()*3)+1;
-		userDb.unshift({name: nameInput.value,number:mobileInput.value,date:dateInput.value,email:emailInput.value,password:passwordInput.value,image:`../images/dummy-${genNumber}.jpg`});
+		userDb.push({name: nameInput.value,number:mobileInput.value,date:dateInput.value,email:emailInput.value,password:passwordInput.value,image:`../images/dummy-${genNumber}.jpg`});
 		
 		localStorage.setItem('users',JSON.stringify(userDb))
-
+    nameInput.value = "";
+		dateInput.value = "";
+		mobileInput.value = "";
+		emailInput.value = "";
+		passwordInput.value= "";
+		confirm = {
+			nameBool : false,
+			emailBool : false,
+			dateBool : false,
+			emailBool : false,
+			passBool: false,
+			numberBool: false,
+		}
 		window.location.href = "assets/profiles/profile.html";
 	}
 }
@@ -170,7 +182,7 @@ const clearError = (element, errorElement) => {
 };
 
 
-const confirm = {
+let confirm = {
   nameBool : false,
   emailBool : false,
   dateBool : false,
