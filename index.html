@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+    <script src="index.js" defer></script>
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="assets/styles/main.css" />
+	</head>
+	<body>
+		<!-- Sign Up Modal -->
+		<div class="modal">
+			<h2 class="form-heading">Sign Up</h2>
+			<form action="#" onsubmit="return false;">
+				<label for="name">Name</label>
+				<input type="text" id="name"  name="name"/>
+        <p class="error name">hello</p>
+      
+
+				<label for="mobile-number">Mobile Number</label>
+				<input type="text" id="mobile-number" name="mobile-number" maxlength="15"/>
+        <p class="error mobile-number">hello</p>
+
+				<label for="date">Date of Birth</label>
+				<input type="date" placeholder="dd/mm/yyyy" id="date" name="date"/>
+        <p class="error date">hello</p>
+
+				<label for="email">Email</label>
+				<input type="text" placeholder="example@email.com" name="email" id="email"/>
+        <p class="error email">hello</p>
+
+				<label for="password">Password</label>
+        <div style="position: relative;">
+          <input type="password" name="password" id="password" class=""/>
+          <img src="assets/images/eye-regular.svg" class="pass-icon">
+          <div style="width: 100%;">
+            <div class="pass-strength"></div>
+          </div>
+          <p class="error password">hello</p>
+        </div>
+
+
+        <button class="btn-submit disabled">Sign Up</button>
+			</form>
+		</div>
+	</body>
+</html>

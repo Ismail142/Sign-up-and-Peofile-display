@@ -1,0 +1,86 @@
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #D1D5DB;
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading-primary {
+  text-align: center;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.user-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-top: 3rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.user {
+  display: flex;
+  background-color: #ffff;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.del-btn{
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.712);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: small;
+  transition-duration: 0.2s;
+}
+
+.del-btn:hover {
+  background-color: rgba(255, 0, 0, 0.61);
+}
+
+.user-img {
+  height: 80px;
+  border-radius: 100px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.no-data {
+  font-size: 2rem;
+}
+
+
+
+@media screen and (max-width:767px){
+  .user-info {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+

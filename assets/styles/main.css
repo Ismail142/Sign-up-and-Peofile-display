@@ -1,0 +1,102 @@
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #D1D5DB;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  padding: 0 0.8rem;
+}
+
+.modal {
+  width: 28rem;
+  background-color: #ffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-error,.input-error:focus{
+  border-color:red;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: rgb(59 130 246);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 14px;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  background-image:  linear-gradient(to right,rgb(29 78 216),rgb(59 130 246));
+  color: #ffff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-submit.disabled {
+  border-color: rgba(59, 131, 246, 0.658);
+  background-image:  linear-gradient(to right,rgba(29, 79, 216, 0.575),rgba(59, 131, 246, 0.658));
+  cursor: not-allowed;
+}
+
+.btn-submit:active {
+  transform: translateY(5px);
+}
+
+.error {
+  font-size: 13px;
+  color: red;
+  margin: 5px 2px;
+  display: none;
+}
+
+.pass-icon {
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.pass-strength {
+  transition: all 0.7s ease;
+  height: 6px;
+  width: 0;
+  background-color: red;
+  margin: 5px 2px;
+  border-radius: 3px;
+
+}
